@@ -111,10 +111,10 @@ MapChart.prototype.pushData = function(_data) {
 
 MapChart.prototype.update = function() {
         var _self = this;
-        
+        // var color = d3.scale.category20b();
         _self.g.selectAll(".circle")
-            // .style("fill", function(d){ return _self.opts.color[d._id.type]; })
-            .style("fill", "red")
+            .style("fill", "#36f")
+            // .style("fill", function(d){ return color(d.name); })
             .attr("transform", function(d) {
             // debugger 
                 return "translate("+ 
@@ -124,6 +124,12 @@ MapChart.prototype.update = function() {
         .transition()
         .attr("r", function(d){ 
             return _self.scale_radio(d.total); 
+        })
+        .attr("cx", function(d){
+            return _self.scale_radio(d.total)/2; 
+        })
+        .attr("cy", function(d){
+            return _self.scale_radio(d.total)/2; 
         });
 
         _self.update_bounding_map()
