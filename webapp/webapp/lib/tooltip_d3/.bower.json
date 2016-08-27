@@ -1,0 +1,33 @@
+{
+  "name": "tooltip_d3",
+  "version": "1.0.1",
+  "homepage": "https://github.com/cbertelegni/tooltip_d3js",
+  "authors": [
+    "cbertelegni <cristianbertelegni@gmail.com>"
+  ],
+  "description": "Simple tooltip plugin for d3.js",
+  "main": "src/tooltip.d3.js",
+  "keywords": [
+    "tooltipd3",
+    "d3",
+    "d3.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "28253123ecc49ecbad651393c65c8e79085fe785"
+  },
+  "_source": "https://github.com/cbertelegni/tooltip_d3js.git",
+  "_target": "~1.0.1",
+  "_originalSource": "tooltipd3",
+  "_direct": true
+}

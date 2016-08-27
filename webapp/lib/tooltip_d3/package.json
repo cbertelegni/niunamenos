@@ -1,0 +1,31 @@
+{
+  "name": "tooltip_d3",
+  "version": "1.0.0",
+  "description": "Tooltip for d3.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbertelegni/tooltip_d3js.git"
+  },
+  "keywords": [
+    "tooltip",
+    "d3.js",
+    "d3"
+  ],
+  "author": "Cristian Bertelegni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cbertelegni/tooltip_d3js/issues"
+  },
+  "homepage": "https://github.com/cbertelegni/tooltip_d3js#readme",
+  "devDependencies": {
+    "gulp-connect": "^2.2.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "jshint-stylish": "^2.0.0"
+  }
+}
