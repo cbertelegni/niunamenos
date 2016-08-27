@@ -57,9 +57,6 @@ function MapChart(opts) {
     
     // _self.update_bounding_map();
     
-    
- 
-
 }
 
 /** update dataset */
@@ -67,11 +64,12 @@ MapChart.prototype.pushData = function(_data) {
     var _self = this;
     // _self.data = _data;
         /** parse data */
+    console.log(_data)
     _self.data = _data.map(function(d) {
+    console.log(d)
         // d.client_supplier_region_loc = _self.get_country_loc(d._id.client_supplier_region);
          // Add a LatLng object to each item in the dataset 
         d.loc = new L.LatLng(d.lat, d.lon)
-        console.log(d)
         // debugger
         return d;
     });
@@ -125,7 +123,7 @@ MapChart.prototype.update = function() {
                 })
         .transition()
         .attr("r", function(d){ 
-            return _self.scale_radio(Math.abs(d.total)); 
+            return _self.scale_radio(d.total); 
         });
 
         _self.update_bounding_map()
