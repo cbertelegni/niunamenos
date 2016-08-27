@@ -18,6 +18,8 @@
   ],
   "dependencies": {
     "d3": "3",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "jquery": "~3.1.0",
+    "tooltip_d3": "tooltipd3#~1.0.1"
   }
 }

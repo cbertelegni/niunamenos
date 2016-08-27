@@ -7,13 +7,13 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 
 
 class ParserData(object):
-    """docstring for ParserData"""
+    """Parseo de datos para watson IBM"""
     def __init__(self):        
         super(ParserData, self).__init__()
         self.file  = os.path.join(BASE, "../data/femicidios_tabla_Datos_Refinados_al_25_de_mayo.csv")
         self.output  = os.path.join(BASE, "../data/output.csv")
         self.data = self.get_data()
-        # stop
+        
 
         with self.data as csvfile:
             reader = csv.DictReader(csvfile)
@@ -39,8 +39,6 @@ class ParserData(object):
         file = open(self.file, "rb")
         return file
 
-        # print(result)
-        # print json.loads(data)
 
 if __name__ == "__main__":
     ParserData()
