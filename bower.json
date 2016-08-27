@@ -1,0 +1,26 @@
+{
+  "name": "niunamenos",
+  "authors": [
+    "cbertelegni <cristianbertelegni@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "3",
+    "underscore": "~1.8.3",
+    "jquery": "~3.1.0",
+    "tooltip_d3": "tooltipd3#~1.0.1",
+    "d3-queue": "queue-async#~3.0.3"
+  }
+}
