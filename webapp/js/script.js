@@ -12,22 +12,20 @@
       "Jujuy": ,
       "Neuquén": ,
       "Santiago del Estero": ,
-      "Chaco": ,
-      "Catamarca": ,
-      "Corrientes": ,
-      "Formosa": ,
-      "San Luis": ,
+      "Chaco": "-26.0193177,-63.1459822",
+      "Catamarca": "-27.5018226,-69.2055836",
+      "Corrientes": "-27.4860817,-58.8591269",
+      "Formosa": "-24.642852,-62.2030241",
+      "San Luis": "-33.9034943,-68.3840197",
       "Exterior": ,
-      "Misiones": ,
-      "Tierra del Fuego": ,
-      "Salta": ,
-      "Ch": ,
-      "Ciudad Autónoma de Buenos Aires": ,
-      "Entre Ríos": ,
-      "La Rioja": ,
-      "Río Negro": ,
-      "Sala": ,
-      "San Juan": ,
+      "Misiones": "-26.8061156,-57.099474",
+      "Tierra del Fuego": "-53.8337145,-69.112786",
+      "Salta": "-24.7957076,-65.5710617",
+      "Ciudad Autónoma de Buenos Aires": "-34.6153711,-58.5737519",
+      "Entre Ríos": "-32.0731636,-61.5380363",
+      "La Rioja": "-29.8276818,-69.8076012",
+      "Río Negro": "-39.6951255,-71.8493843",
+      "San Juan": "-31.5316975,-68.5677823",
       "Santa Cruz": "-49.0988388,-74.1563847" ,
   };
 $(function(){
@@ -43,14 +41,16 @@ $(function(){
             var location = k + ", Argentina"
             // get geo location
             console.log(k)
-            // var prov = {
-            //     name: k,
-            //     data: data[k],
-            //     total: data[k].length,
-            //     lat: loc.lat,
-            //     lon: loc.lon
-            // }
-            // if(k != "Exterior"){
+            var prov = {
+                name: k,
+                data: data[k],
+                total: data[k].length,
+                lat: locs[k].split(",")[0],
+                lon: locs[k].split(",")[1]
+            }
+            if(k != "Exterior"){
+                provs.push(prov);
+            }
             //     $.get('http://nominatim.openstreetmap.org/search?format=json&q='+encodeURIComponent(location), function(_data){
             //        var loc = _data.filter(function(d){
             //         return d.type == "administrative";
@@ -60,13 +60,12 @@ $(function(){
             //        // console.log(loc)
             //        loc = loc ? loc : _data[0];
             //     // debugger
-            //         provs.push(prov);
             //     });
             //         // map.pushData(provs);
 
             //         // map.update_bounding_map();
-            // }
 
         }
+            console.log(provs)
     })
 });
