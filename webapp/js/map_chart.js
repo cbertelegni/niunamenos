@@ -99,7 +99,7 @@ MapChart.prototype.pushData = function(_data) {
     function fn_events_tootip(){
         this.on("mouseover", function(d){
             var html = "<b>"+d.name+"</b><br>";
-                html += "<b>Value:</b> $"+d.total+"<br>";
+                html += "<b>Value:</b> "+d.total+"<br>";
                 html += "<b>Quantity:</b> "+"<br>";
             _self.tooltip.mouseover(html); // pass html content
             // console.log(d)
