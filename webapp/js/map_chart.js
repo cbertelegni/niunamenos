@@ -64,12 +64,12 @@ MapChart.prototype.pushData = function(_data) {
     var _self = this;
     // _self.data = _data;
         /** parse data */
-    console.log(_data)
+    // console.log(_data)
     _self.data = _data.map(function(d) {
-    console.log(d)
+    // console.log(d)
         // d.client_supplier_region_loc = _self.get_country_loc(d._id.client_supplier_region);
          // Add a LatLng object to each item in the dataset 
-        d.loc = new L.LatLng(d.lat, d.lon)
+        d.loc = new L.LatLng(d.lat, d.lon);
         // debugger
         return d;
     });
@@ -93,7 +93,7 @@ MapChart.prototype.pushData = function(_data) {
         .call(fn_events_tootip)  
         ; 
 
-    _self.feature.exit().remove()
+    _self.feature.exit().remove();
     _self.update();
     
     function fn_events_tootip(){
@@ -132,7 +132,7 @@ MapChart.prototype.update = function() {
             return _self.scale_radio(d.total)/2; 
         });
 
-        _self.update_bounding_map()
+        _self.update_bounding_map();
 };
 
 MapChart.prototype.update_bounding_map = function() {

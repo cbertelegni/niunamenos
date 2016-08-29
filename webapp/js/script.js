@@ -35,6 +35,9 @@ $(function(){
     // d3.csv("https://docs.google.com/spreadsheets/d/163UrZhmaj2xTS5_Eu-BflP-QzL6OPu4l7y_iZuKrTto/edit#gid=0", function(e, d){
     d3.csv("data/data.csv", function(e, data){
         data = _.groupBy(data, 'Provincia');
+        // data_by_year = _.groupBy(data, 'Provincia');
+        
+
         var provs = [];
         for(var k in data){
             // var location = k + ", Argentina"
@@ -50,18 +53,7 @@ $(function(){
                 };
                 provs.push(prov);
             }
-            //     $.get('http://nominatim.openstreetmap.org/search?format=json&q='+encodeURIComponent(location), function(_data){
-            //        var loc = _data.filter(function(d){
-            //         return d.type == "administrative";
-            //        })[0];
-            //        //  console.log(k)
-            //        //  console.log(_data)
-            //        // console.log(loc)
-            //        loc = loc ? loc : _data[0];
-            //     // debugger
-            //     });
-
-
+        
         }
         map.pushData(provs);
         map.update_bounding_map();
