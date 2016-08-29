@@ -53,7 +53,7 @@ function MapChart(opts) {
     
     _self.map.on("viewreset", function(){ _self.update(); });
     // _self.map.on("zoomend", function(){ _self.update(); });
-    _self.map.on("zoomlevelschange", function(){ _self.update(); });
+    // _self.map.on("zoomlevelschange", function(){ _self.update(); });
     
     // _self.update_bounding_map();
     
@@ -99,8 +99,7 @@ MapChart.prototype.pushData = function(_data) {
     function fn_events_tootip(){
         this.on("mouseover", function(d){
             var html = "<b>"+d.name+"</b><br>";
-                html += "<b>Value:</b> "+d.total+"<br>";
-                html += "<b>Quantity:</b> "+"<br>";
+                html += "<b>Femicidios:</b> "+d.total+"<br>";
             _self.tooltip.mouseover(html); // pass html content
             // console.log(d)
         })
@@ -132,7 +131,7 @@ MapChart.prototype.update = function() {
             return _self.scale_radio(d.total)/2; 
         });
 
-        _self.update_bounding_map();
+        // _self.update_bounding_map();
 };
 
 MapChart.prototype.update_bounding_map = function() {
