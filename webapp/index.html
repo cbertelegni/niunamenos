@@ -14,8 +14,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.0/leaflet.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <style type="text/css">
-        #viz { width: 600px; height: 400px; }
-        .tooltipd3 { background: #fff }
+        #viz { width: 600px; height: 600px; margin: 0 auto; }
+        .tooltipd3 { background: #fff; padding: 10px; border-radius: 5px; }
+
+        /** bars */
+    .canvas_bar{ 
+        border-top:solid 20px #fff;
+        position: relative; height: 100px; background: #fff; 
+    }
+    .canvas_bar .bar { 
+        background: red;
+        width: 10%;
+        height: 10%;
+        position: absolute; bottom: 0; left: 0; 
+        -webkit-transition: all 0.8s; /* Safari */
+        transition: all 0.8s;
+    }
+    .canvas_bar .bar_label {
+        position: absolute; 
+        top: 102%; left: 0; 
+        -webkit-transition: all 0.8s; /* Safari */
+        transition: all 0.8s;
+        overflow: hidden;
+        font-size: 10px;
+        height: 23px;
+        text-align: center;
+        line-height: 1em;
+    } 
+    .canvas_bar .bar .bar_txt{
+        text-align: center;
+        position: relative;
+        top: -15px;
+        font-size: 11px;
+    } 
     </style>
 
   </head>
@@ -35,6 +66,13 @@
         <p>Este mapa muestra la cantidad de femicidios por provincia.... <!-- <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch. --></p>
 
         <div id="viz"></div>
+
+        <h3>
+          <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cantidad de femicidios por año</h3>
+
+          <p>Las barras indican la cantidad de femicidios por año, tener en cuenta que los datos históricos son relevados ....</p>
+
+          <div id="by_year_bars"></div>
 <!-- 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
@@ -80,5 +118,6 @@
 <script src="lib/tooltip_d3/src/tooltip.d3.js"></script>
 
 <script type="text/javascript" src="js/map_chart.js"></script>
+<script type="text/javascript" src="js/bar_chart.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <!-- endbuild -->

@@ -112,7 +112,7 @@ MapChart.prototype.update = function() {
         var _self = this;
         // var color = d3.scale.category20b();
         _self.g.selectAll(".circle")
-            .style("fill", "#36f")
+            .style("fill", "#1e6bb8")
             // .style("fill", function(d){ return color(d.name); })
             .attr("transform", function(d) {
             // debugger 
