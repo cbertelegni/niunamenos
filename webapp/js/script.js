@@ -78,7 +78,6 @@ $(function(){
         var opts_barchart = {
           content: "#by_year_bars",
           axis: "value",
-          division: 1000000
         };
 
         var bar_anio = new BarChart(bars, opts_barchart);
@@ -98,10 +97,9 @@ $(function(){
         var opts_bar_porquien = {
           content: "#by_porquien",
           axis: "value",
-          division: 1000000
         };
         var bar_porquienRegular = new BarChart(bars_quien, opts_bar_porquien);
-    
+
 
         /** barras x como?? */
         var bars_como = [];
@@ -116,7 +114,6 @@ $(function(){
         var opts_bar_como = {
           content: "#comoRegular",
           axis: "value",
-          division: 1000000
         };
         var bar_x_como = new BarChart(bars_como, opts_bar_como);
     
@@ -135,7 +132,6 @@ $(function(){
         var opts_bar_embarazada = {
           content: "#embarazada",
           axis: "value",
-          division: 1000000
         };
         var bar_x_embarazada = new BarChart(bars_embarazada, opts_bar_embarazada);
     
@@ -154,11 +150,21 @@ $(function(){
         var opts_bar_mes = {
           content: "#mes",
           axis: "value",
-          division: 1000000
         };
         var bar_x_mes = new BarChart(bars_mes, opts_bar_mes);
     
-
+        var doit;
+        window.onresize = function(d) {
+          clearTimeout( doit );
+          doit = setTimeout( resizeWindow, 200 );
+        };
+        function resizeWindow(){
+          bar_porquienRegular.update();
+          bar_anio.update();
+          bar_x_como.update();
+          bar_x_embarazada.update();
+          bar_x_mes.update();
+        }
 
 
     });

@@ -15,6 +15,7 @@ function BarChart(data, opts){
     _self.tooltip = tooltipd3();
     
     _self.pushData = pushData;
+    _self.update = update;
 
     pushData(data);
     
