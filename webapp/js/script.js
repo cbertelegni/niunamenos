@@ -76,8 +76,7 @@ $(function(){
         }
 
         var opts_barchart = {
-          content: "#by_year_bars",
-          axis: "value",
+          content: "#by_year_bars"
         };
 
         var bar_anio = new BarChart(bars, opts_barchart);
@@ -95,8 +94,7 @@ $(function(){
           bars_quien.push(obj);
         }
         var opts_bar_porquien = {
-          content: "#by_porquien",
-          axis: "value",
+          content: "#by_porquien"
         };
         var bar_porquienRegular = new BarChart(bars_quien, opts_bar_porquien);
 
@@ -130,8 +128,7 @@ $(function(){
           bars_embarazada.push(obj);
         }
         var opts_bar_embarazada = {
-          content: "#embarazada",
-          axis: "value",
+          content: "#embarazada"
         };
         var bar_x_embarazada = new BarChart(bars_embarazada, opts_bar_embarazada);
     
@@ -148,8 +145,7 @@ $(function(){
           bars_mes.push(obj);
         }
         var opts_bar_mes = {
-          content: "#mes",
-          axis: "value",
+          content: "#mes"
         };
         var bar_x_mes = new BarChart(bars_mes, opts_bar_mes);
     
