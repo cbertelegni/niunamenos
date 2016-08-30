@@ -53,7 +53,7 @@ function MapChart(opts) {
     
     _self.map.on("viewreset", function(){ _self.update(); });
     // _self.map.on("zoomend", function(){ _self.update(); });
-    // _self.map.on("zoomlevelschange", function(){ _self.update(); });
+    _self.map.on("zoomlevelschange", function(){ _self.update(); });
     
     // _self.update_bounding_map();
     
@@ -124,12 +124,13 @@ MapChart.prototype.update = function() {
         .attr("r", function(d){ 
             return _self.scale_radio(d.total); 
         })
-        .attr("cx", function(d){
-            return _self.scale_radio(d.total)/2; 
-        })
-        .attr("cy", function(d){
-            return _self.scale_radio(d.total)/2; 
-        });
+        // .attr("cx", function(d){
+        //     // return _self.scale_radio(d.total)/2; 
+        // })
+        // .attr("cy", function(d){
+        //     // return -(_self.scale_radio(d.total)/2); 
+        // })
+        ;
 
         // _self.update_bounding_map();
 };

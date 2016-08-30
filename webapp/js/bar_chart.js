@@ -10,7 +10,7 @@ function BarChart(data, opts){
     _self.canvas = d3.select(opts.content)
         .append("div").attr("class", "canvas_bar");
     
-    _self.scaleY = d3.scale.linear().range([0, 100]);
+    _self.scaleY = d3.scale.linear().range([5, 100]);
 
     _self.tooltip = tooltipd3();
     
@@ -78,7 +78,7 @@ function BarChart(data, opts){
                 return (w+padding) * i + (padding /2) +"px";
             })
             .style("height", function(d, i){
-                return _self.scaleY(d.total) +"px";
+                return _self.scaleY(d.total) +"%";
             })
             .style("bottom", function(d, i){
                 return 0 +"px";
