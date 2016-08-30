@@ -66,9 +66,7 @@ MapChart.prototype.pushData = function(_data) {
         /** parse data */
     // console.log(_data)
     _self.data = _data.map(function(d) {
-    // console.log(d)
-        // d.client_supplier_region_loc = _self.get_country_loc(d._id.client_supplier_region);
-         // Add a LatLng object to each item in the dataset 
+        // Add a LatLng object to each item in the dataset 
         d.loc = new L.LatLng(d.lat, d.lon);
         // debugger
         return d;
